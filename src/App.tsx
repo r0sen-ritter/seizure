@@ -1,7 +1,22 @@
+import { Routes, Route } from "react-router-dom";
 import "./globals.css";
+import SigninForm from "./_auth/forms/SigninForm";
+import { Home } from "./_root/pages";
+import SignupForm from "./_auth/forms/SignupForm";
 
 function App() {
-  return <></>;
+  return (
+    <main className="flex h-screen">
+      <Routes>
+        {/* public routes */}
+        <Route path="/sign-in" element={<SigninForm/>}/>
+        <Route path="/sign-up" element={<SignupForm/>}/>
+
+        {/* private routes */}
+        <Route index element={<Home/>}/>
+      </Routes>
+    </main>
+  );
 }
 
 export default App;
