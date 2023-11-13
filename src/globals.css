@@ -267,7 +267,7 @@
 
   /* Button */
   .shad-button_primary {
-    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-primary-600 text-light-1 flex gap-2 !important;
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-primary-500  text-light-1 flex gap-2 !important;
   }
 
   .shad-button_dark_4 {
@@ -277,4 +277,20 @@
   .shad-button_ghost {
     @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-white !important;
   }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-image {
+  animation: blink 3s infinite;
 }
